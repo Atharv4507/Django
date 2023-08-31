@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="static/script.js"></script>
+        <link rel="shortcut icon" type="x-icon" href="static/images/doc4.jpg">
+        <title>Spirit Medic</title>
+    </head>
+
+    <body>
+        <div class="at fs-2">
+            <h1><b>Spirit Medic</b><h1>
+            <div id="myLinks" class="nav ">
+                <a class="Ahref" aria-current="page" href="/index">Home</a>
+                <a class="Ahref" href="/about">About</a>
+                <a class="Ahref" href="/courses">Psychologists</a>
+                <a class="Ahref" href="/services">Services</a>
+                <a class="Ahref" href="/contact">Logout</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="icon Ahref" id="icon1" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </body>
+
+</html>
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show my-0" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+{% block body %}{% endblock body %}

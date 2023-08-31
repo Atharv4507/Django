@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% block title %}pl{% endblock title %}
+{% block body %}
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">OUR COURSES</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <a href="{% url 'py1intro' %}">
+            <img src="static/images/pythondeveloper.jpeg" width="100px" height="100px" alt="...">
+          </a>
+        </div>
+        <h3 class="fs-2">Python</h3>
+        <p>Complete Python Full Stack Course by Atech in English.Become the Master in Python</p>
+        <a href="{% url 'py1intro' %}" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download2.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Matchine Learning</h3>
+        <p>Complete Machine Learning Course by Atech in English.Become the Master in Matchine Learning</p>
+        <a href="https://www.youtube.com/watch?v=6uE4nfFgc5Q" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download3.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Java</h3>
+        <p>Complete Java Advance Course by Atech in English.Become the Master in Java</p>
+        <a href="https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q"
+          class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  {% comment %}
+  <div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">OUR COURSES</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/pythondeveloper.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Python Full Stack</h3>
+        <p>Complete Python Full Stack Course by Atech in English.Become the Master in Python</p>
+        <a href="https://www.youtube.com/watch?v=JxzZxdht-XY" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download2.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Matchine Learning</h3>
+        <p>Complete Machine Learning Course by Atech in English.Become the Master in Matchine Learning</p>
+        <a href="https://www.youtube.com/watch?v=6uE4nfFgc5Q" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download3.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Java Advance</h3>
+        <p>Complete Java Advance Course by Atech in English.Become the Master in Java</p>
+        <a href="https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q"
+          class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">OUR COURSES</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/pythondeveloper.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Python Full Stack</h3>
+        <p>Complete Python Full Stack Course by Atech in English.Become the Master in Python</p>
+        <a href="https://www.youtube.com/watch?v=JxzZxdht-XY" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download2.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Matchine Learning</h3>
+        <p>Complete Machine Learning Course by Atech in English.Become the Master in Matchine Learning</p>
+        <a href="https://www.youtube.com/watch?v=6uE4nfFgc5Q" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download3.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Java Advance</h3>
+        <p>Complete Java Advance Course by Atech in English.Become the Master in Java</p>
+        <a href="https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q"
+          class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">OUR COURSES</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/pythondeveloper.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Python Full Stack</h3>
+        <p>Complete Python Full Stack Course by Atech in English.Become the Master in Python</p>
+        <a href="https://www.youtube.com/watch?v=JxzZxdht-XY" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download2.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">Matchine Learning</h3>
+        <p>Complete Machine Learning Course by Atech in English.Become the Master in Matchine Learning</p>
+        <a href="https://www.youtube.com/watch?v=6uE4nfFgc5Q" class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <img src="static/images/download3.jpeg" width="100px" height="100px" alt="...">
+        </div>
+        <h3 class="fs-2">c Advance</h3>
+        <p>Complete Java Advance Course by Atech in English.Become the Master in Java</p>
+        <a href="https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q"
+          class="icon-link d-inline-flex align-items-center">
+          Call to action
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#chevron-right" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div> {% endcomment %}
+{% endblock body %}

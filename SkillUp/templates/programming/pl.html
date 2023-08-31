@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}pl{% endblock title %}
+{% block body %}
+<div class="container-old px-4 py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom h1a">OUR COURSES</h2>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col" id="1">
+          <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <a href="{% url 'py1intro' %}">
+                  <img src="static/images/pythondeveloper.jpeg" width="100px" height="100px" alt="...">
+              </a>
+          </div>
+          <hr>
+          <h3 class="fs-2">Python {{ course.course_id }}</h3>
+          <p>Complete Python Course by SkilledUp in English.Become the Master in Python.from scrach to advance level.</p>
+          <hr>
+          <a href="{% url 'py1intro' %}" class="btn-atharv">
+              Call to action
+              <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#chevron-right" />
+              </svg>
+          </a>
+      </div>
+      <div class="feature col" id="2">
+          <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <a href="{% url 'py1intro' %}"><img src="static/images/download2.jpeg" width="100px" height="100px" alt="..."></a>
+          </div>
+          <hr>
+          <h3 class="fs-2">Matchine Learning</h3>
+          <p>Complete Machine Learning Course by SkilledUp in English.Become the Master in Matchine Learning</p>
+          <hr>
+          <a href="{% url 'py1intro' %}"class="btn-atharv">
+              Call to action
+              <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#chevron-right" />
+              </svg>
+          </a>
+      </div>
+      <div class="feature col" id="3">
+          <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <a href="{% url 'j1intro' %}"><img src="static/images/download3.jpeg" width="100px" height="100px" alt="..."></a>
+          </div>
+          <hr>
+          <h3 class="fs-2">Java</h3>
+          <p>Complete Java Course by SkilledUp in English.Become the Master in Python.from scrach to advance level.</p>
+          <hr>
+          <a href="{% url 'j1intro' %}" class="btn-atharv">
+              Call to action
+              <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#chevron-right" />
+              </svg>
+          </a>
+      </div>
+  </div>
+</div>
+{% endblock body %}

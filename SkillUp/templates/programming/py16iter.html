@@ -1,0 +1,243 @@
+{% include 'pythonb.html'%}
+{% block body %}
+
+<div style="position:absolute; align-items: center; justify-content: center; margin: 5% 5% 5% 5%;" class="div-share">
+
+    <div class="w3-col l10 m12" id="main">
+        
+
+        <h1>Python <span class="color_h1">Iterators</span></h1>
+       
+        <hr>
+
+        <h2>Python Iterators</h2>
+        <p>An iterator is an object that contains a countable number of values.</p>
+        <p>An iterator is an object that can be iterated upon, meaning that you can
+            traverse through all the values.</p>
+        <p>Technically, in Python, an iterator is an object which implements the
+            iterator protocol, which consist of the methods <code class="w3-codespan">__iter__()</code>
+            and <code class="w3-codespan">__next__()</code>.</p>
+        <hr>
+
+        <h2>Iterator vs Iterable</h2>
+        <p>Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable
+            <em>containers</em> which you can get an iterator from.
+        </p>
+        <p>All these objects have a <code class="w3-codespan">iter()</code> method which is used to get an iterator:</p>
+
+        <div class="w3-example">
+            <h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured"
+                    href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own
+                    Python Server</a></h3>
+            <p>Return an iterator from a tuple, and print each value:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> mytuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                        class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                        style="color:brown">"cherry"</span>)<br>myit = <span class="pythonkeywordcolor"
+                        style="color:mediumblue">iter</span>(mytuple)<br><br><span class="pythonnumbercolor"
+                        style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_iterator">Try it
+                Yourself »</a>
+        </div>
+
+        <p>Even strings are iterable objects, and can return an iterator:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Strings are also iterable objects, containing a sequence of characters:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> mystr = <span class="pythonstringcolor" style="color:brown">"banana"</span><br>myit = <span
+                        class="pythonkeywordcolor" style="color:mediumblue">iter</span>(mystr)<br><br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myit))<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_iterator2">Try it
+                Yourself »</a>
+        </div>
+
+        <hr>
+
+        <h2>Looping Through an Iterator</h2>
+
+        <p>We can also use a <code class="w3-codespan">for</code> loop to iterate through an iterable object:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Iterate the values of a tuple:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> mytuple = (<span class="pythonstringcolor" style="color:brown">"apple"</span>, <span
+                        class="pythonstringcolor" style="color:brown">"banana"</span>, <span class="pythonstringcolor"
+                        style="color:brown">"cherry"</span>)<br><span class="pythonnumbercolor" style="color:red">
+                    </span> <br><span class="pythonkeywordcolor" style="color:mediumblue">for</span> x <span
+                        class="pythonkeywordcolor" style="color:mediumblue">in</span> mytuple:<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> &nbsp; <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(x) </span>
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_iterator_loop">Try it
+                Yourself »</a>
+        </div>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Iterate the characters of a string:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> mystr = <span class="pythonstringcolor" style="color:brown">"banana"</span><br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <br><span class="pythonkeywordcolor" style="color:mediumblue">for</span> x <span
+                        class="pythonkeywordcolor" style="color:mediumblue">in</span> mystr:<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> &nbsp; <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(x) </span>
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_iterator_loop2">Try it
+                Yourself »</a>
+        </div>
+
+        <p>The <code class="w3-codespan">for</code> loop actually creates an iterator object and executes the next()
+            method for each loop.</p>
+        <hr>
+        <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+            <!-- MidContent -->
+            <!-- <p class="adtext">Advertisement</p> -->
+
+            <div id="adngin-mid_content-0" data-google-query-id="CMCGpOXj9_8CFVp0Kwodq50Eeg">
+                <div id="sn_ad_label_adngin-mid_content-0" class="sn_ad_label"
+                    style="color:#000000;font-size:12px;margin:0;text-align:center;">ADVERTISEMENT</div>
+                <div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0__container__"
+                    style="border: 0pt none;"><iframe
+                        id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0"
+                        name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0"
+                        title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0"
+                        marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0"
+                        style="border: 0px; vertical-align: bottom;" data-load-complete="true"
+                        data-google-container-id="2"></iframe></div>
+            </div>
+
+        </div>
+        <hr>
+
+        <h2>Create an Iterator</h2>
+
+        <p>To create an object/class as an iterator you have to implement the methods
+            <code class="w3-codespan">__iter__()</code> and <code class="w3-codespan">
+  __next__()</code> to your object.
+        </p>
+        <p>As you have learned in the <a href="python_classes.asp">Python
+                Classes/Objects</a> chapter, all classes have a function called
+            <code class="w3-codespan">__init__()</code>, which allows you to do some
+            initializing when the object is being created.
+        </p>
+        <p>The <code class="w3-codespan">__iter__()</code> method acts similar, you can
+            do operations (initializing etc.), but must always return the iterator object
+            itself.</p>
+        <p>The <code class="w3-codespan">__next__()</code> method also allows you to do
+            operations, and must return the next item in the sequence.</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Create an iterator that returns numbers, starting with 1, and each sequence
+                will increase by one (returning 1,2,3,4,5 etc.):</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">class</span> MyNumbers:<br>&nbsp;
+                    <span class="pythonkeywordcolor" style="color:mediumblue">def</span>
+                    __iter__(self):<br>&nbsp;&nbsp;&nbsp; self.a = <span class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonnumbercolor" style="color:red">1</span><br>&nbsp;&nbsp;&nbsp; <span
+                        class="pythonkeywordcolor" style="color:mediumblue">return</span> self<br><br>&nbsp; <span
+                        class="pythonkeywordcolor" style="color:mediumblue">def</span>
+                    __next__(self):<br>&nbsp;&nbsp;&nbsp; <span class="pythonnumbercolor" style="color:red">
+                    </span> x = self.a<br>&nbsp;&nbsp;&nbsp; self.a += <span class="pythonnumbercolor"
+                        style="color:red">1</span><br>&nbsp;&nbsp;&nbsp; <span class="pythonkeywordcolor"
+                        style="color:mediumblue">return</span> x<br><span class="pythonnumbercolor" style="color:red">
+                    </span> <br>myclass = MyNumbers()<br>myiter =<span class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">iter</span>(myclass)<br><br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myiter))<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myiter))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myiter))<br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myiter))<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(<span
+                        class="pythonkeywordcolor" style="color:mediumblue">next</span>(myiter)) </span></div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_iterator_create">Try it
+                Yourself »</a>
+        </div>
+        <hr>
+
+        <h2>StopIteration</h2>
+
+        <p>The example above would continue forever if you had enough next() statements, or if it was used in a
+            <code class="w3-codespan">for</code> loop.
+        </p>
+        <p>To prevent the iteration from going on forever, we can use the
+            <code class="w3-codespan">StopIteration</code> statement.
+        </p>
+        <p>In the <code class="w3-codespan">__next__()</code> method, we can add a terminating condition to raise an
+            error if the iteration is done a specified number of times:</p>
+
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Stop after 20 iterations:</p>
+            <div class="w3-code notranslate pythonHigh"><span class="pythoncolor" style="color:black"><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">class</span> MyNumbers:<br>&nbsp;
+                    <span class="pythonkeywordcolor" style="color:mediumblue">def</span>
+                    __iter__(self):<br>&nbsp;&nbsp;&nbsp; self.a = <span class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonnumbercolor" style="color:red">1</span><br>&nbsp;&nbsp;&nbsp; <span
+                        class="pythonkeywordcolor" style="color:mediumblue">return</span> self<br><br>&nbsp; <span
+                        class="pythonkeywordcolor" style="color:mediumblue">def</span>
+                    __next__(self):<br>&nbsp;&nbsp;&nbsp; <span class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">if</span> self.a &lt;= <span
+                        class="pythonnumbercolor" style="color:red">20</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x =
+                    self.a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pythonnumbercolor" style="color:red">
+                    </span> self.a += <span class="pythonnumbercolor"
+                        style="color:red">1</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pythonkeywordcolor"
+                        style="color:mediumblue">return</span> x<br>&nbsp;&nbsp;&nbsp; <span class="pythonnumbercolor"
+                        style="color:red">
+                    </span> <span class="pythonkeywordcolor"
+                        style="color:mediumblue">else</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+                        class="pythonkeywordcolor" style="color:mediumblue">raise</span> StopIteration<br><br>myclass =
+                    <span class="pythonnumbercolor" style="color:red">
+                    </span> MyNumbers()<br>myiter =<span class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">iter</span>(myclass)<br><br><span
+                        class="pythonkeywordcolor" style="color:mediumblue">for</span> x <span
+                        class="pythonkeywordcolor" style="color:mediumblue">in</span> myiter:<br>&nbsp; <span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> <span class="pythonkeywordcolor" style="color:mediumblue">print</span>(x)<br><span
+                        class="pythonnumbercolor" style="color:red">
+                    </span> </span></div>
+        </div>
+        <hr>
+    </div>
+    <a href="{%url 'py14class'%}" id="link-pyarrays" class="b-href">Back</a>
+    <a href="{%url 'py16iter'%}" id="link-pylist" class="a-href">Next</a>
+</div>
+{% endblock body%}

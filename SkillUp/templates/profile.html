@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1 class="h1a" id="sentence">Hello {{user.username}}</h1>
+    <h1 class="h1a">Progress Report</h1>
+    <p class="h1a">Progress: <span id="progress">0%</span></p>
+    {% if progress_reports %}
+        <ul>
+            {% for report in progress_reports %}
+                <li>{{ report.date }}: {{ report.progress }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="h1a">No progress reports found.</p>
+    {% endif %}
+{% endblock body %}

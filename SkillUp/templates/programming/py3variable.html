@@ -1,0 +1,141 @@
+{% include 'pythonb.html'%}
+{% block body %}
+
+<div style="position:absolute; align-items: center; justify-content: center; margin: 5% 5% 5% 5%;" class="div-share">
+    <div>
+        <h1>Variables</h1>
+        <p>Variables are containers for storing data values.</p>
+    </div>
+    <div>
+        <h3>Creating Variables</h3>
+        <p>Python has no command for declaring a variable.</p>
+        <p>A variable is created the moment you first assign a value to it.</p>
+    </div>
+    <div>
+        <h5>Example</h5>
+        <p>x = 5</p>
+        <p>y = "John"</p>
+        <p>print(x)</p>
+        <p>print(y)</p>
+        <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+    </div>
+    <div>
+        <h5>Example</h5>
+        <p>
+            x = 4       # x is of type int<br>
+            x = "Sally" # x is now of type str<br>
+            print(x)<br>
+            Casting<br>
+            If you want to specify the data type of a variable, this can be done with casting.
+        </p>
+    </div>
+    <div>
+        <p>
+            <h5>Example</h5>
+            x = str(3)    # x will be '3'<br>
+            y = int(3)    # y will be 3<br>
+            z = float(3)  # z will be 3.0<br>
+        </p>
+        <p>
+            <h5>Example</h5>
+            x = str(3)    # x will be '3'<br>
+            y = int(3)    # y will be 3<br>
+            z = float(3)  # z will be 3.0<br>
+        </p>
+        <p>
+            Get the Type<br>
+            You can get the data type of a variable with the type() function.<br>
+        </p>
+        <p>
+            <h5>Example</h5>
+            x = 5<br>
+            y = "John"<br>
+            print(type(x))<br>
+            print(type(y))<br>
+            You will learn more about data types and casting later in this tutorial.<br>
+            Single or Double Quotes?<br>
+            String variables can be declared either by using single or double quotes:<br>
+        </p>
+        <p>
+            Example<br>
+            x = "John"<br>
+            # is the same as<br>
+            x = 'John'<br>
+            Case-Sensitive<br>
+            Variable names are case-sensitive.<br>
+        </p>
+    </div>
+    <div>
+        <h1> Output Variables</h1>
+        <p>
+            The Python print() function is often used to output variables.</p>
+        
+        <h5>Example</h5>
+        <p>
+            
+        x = "Python is awesome"<br>
+        print(x)<br>
+        In the print() function, you output multiple variables, separated by a comma:<br>
+        </p>
+        
+        <h5>Example</h5>
+        <p>
+            
+        x = "Python"<br>
+        y = "is<br>"
+        z = "awesome"<br>
+        print(x, y, z)<br>
+        You can also use the + operator to output multiple variables:<br>
+        </p>
+        
+        <h5>Example</h5>
+        x = "Python "<br>
+        y = "is "<br>
+        z = "awesome"<br>
+        print(x + y + z)<br>
+        Notice the space character after "Python " and "is ", without them the result would be "Pythonisawesome".<br>
+    </div>
+    <div>
+        <h1>Global Variables</h1>
+        <p>
+            Variables that are created outside of a function (as in all of the examples above) are known as global variables.</p>
+        
+        <p>        Global variables can be used by everyone, both inside of functions and outside.
+        </p>
+        <h5>Example</h5>
+        <p>
+            Create a variable outside of a function, and use it inside the function<br>
+        
+            x = "awesome"<br>
+            
+            def myfunc():<br>
+              print("Python is " + x)<br><br>
+            
+            myfunc()<br>
+        </p>
+        <p>
+            
+        If you create a variable with the same name inside a function, <br>
+        this variable will be local, and can only be used inside the function. <br>
+        The global variable with the same name will remain as it was, global and with the original value.<br>
+        </p>
+        
+        <h5>Example</h5>
+        <p>
+            Create a variable inside a function, with the same name as the global variable<br><br>
+        
+            x = "awesome"<br><br>
+            
+            def myfunc():<br>
+              x = "fantastic"<br>
+              print("Python is " + x)<br><br>
+            
+            myfunc()<br><br>
+            
+            print("Python is " + x)<br>
+        </p>
+    </div>
+<a href="{%url 'py2syntax'%}" id="link-py2syntax" class="b-href">Back</a>
+<a href="{%url 'py4datatype'%}" id="link-py4datatype" class="a-href">Next</a>
+</div>
+{% endblock body%}

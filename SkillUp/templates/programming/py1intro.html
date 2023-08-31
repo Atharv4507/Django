@@ -1,0 +1,36 @@
+{% include 'pythonb.html'%}
+{% block body %}
+
+<div style="position:absolute; align-items: center; justify-content: center; margin: 5% 5% 5% 5%;" class="div-share">
+    <div class="div-share-a">
+        <h1>What is Python?</h1>
+        <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+        <p>It is used for:</p>
+        <ul>
+            <li>web development (server-side),</li>
+              <li>software development,</li>
+            <li>mathematics,</li>
+            <li>system scripting.</li>
+        </ul>
+    </div>
+    <br>
+    <div class="div-share-a">
+        <h1>What can Python do?</h1>
+        <p>Python can be used on a server to create web applications.</p>
+        <p>Python can be used alongside software to create workflows.</p>
+        <p>Python can connect to database systems. It can also read and modify files.</p>
+        <p>Python can be used to handle big data and perform complex mathematics.</p>
+        <p>Python can be used for rapid prototyping, or for production-ready software development.</p>
+    </div>
+    <br>
+    <div class="div-share-a">
+        <h1>Why Python?</h1>
+        <p>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</p>
+        <p>Python has a simple syntax similar to the English language.</p>
+        <p>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</p>
+        <p>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</p>
+        <p>Python can be treated in a procedural way, an object-oriented way or a functional way.</p>
+    </div>
+    <a href="{%url 'py2syntax'%}" id="link-py2syntax" class="a-href">Next</a>
+</div>
+{% endblock body%}

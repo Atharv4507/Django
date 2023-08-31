@@ -1,0 +1,61 @@
+{% include 'pythonb.html'%}
+{% block body %}
+<div style="position:absolute; align-items: center; justify-content: center; margin: 5% 5% 5% 5%;" class="div-share">
+    <div>
+        <h1>Execute Python Syntax</h1>
+        <p>As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:</p>
+        <div>
+            <p>
+                >>> print("Hello, World!")<br>
+                Hello, World!  
+            </p>
+        </div>
+    </div>
+    <div>
+        <h3>creating a python file on the server, using the .py file extension, and running it in the Command Line:</h3>
+        <p>C:\Users\Your Name>python myfile.py</p>
+    </div>
+    <div>
+        <h1>Python Indentation</h1>
+        <p>Indentation refers to the spaces at the beginning of a code line.</p>
+
+        <p>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
+        
+        <p>Python uses indentation to indicate a block of code.</p>
+        <p>
+            ExampleGet your own Python Server<br>
+            if 5 > 2:<br>
+            print("Five is greater than two!")<br>
+            Python will give you an error if you skip the indentation:<br>
+        </p>
+    </div>
+    <div>
+        <h1>Example</h1>
+        <p>
+            Syntax Error:<br>
+
+            if 5 > 2:<br>
+            print("Five is greater than two!")<br>
+            The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.<br>
+
+            Example<br>
+            if 5 > 2:<br>
+            print("Five is greater than two!")<br> 
+            if 5 > 2:<br>
+                    print("Five is greater than two!")<br> 
+            You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:<br>
+
+            Example<br>
+            Syntax Error:<br>
+
+            if 5 > 2:<br>
+            print("Five is greater than two!")<br>
+            print("Five is greater than two!")<br>
+        </p>
+    </div>
+    <a href="{%url 'py1intro'%}" id="link-py1intro" class="b-href">Back</a>
+    <a href="{%url 'py3variable'%}" id="link-py3variable" class="a-href">Next</a>
+</div>
+{% endblock body%}
+
+

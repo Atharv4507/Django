@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="static/images/skillup1.jpg">
+    <title>SkilledUp</title>
+    <link rel="stylesheet" type="text/css" href="static/sign.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show my-0" role="alert">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %} 
+        <a href="/index" style="margin:0px 390px; background-color:black;">&#10060;</a>
+        <img src="static/images/skillup1.jpg" alt="icon" style="height:35px; width:35px; margin:2px 165px;">
+        <h1 style="text-align:center;">SkilledUp</h1>
+        <h4 style="text-align:center;">Signup Here</h4>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email or Phone" name="email" id="email">
+
+        {% comment %} 
+        <label for="first_name">First Name</label>
+        <input type="text" placeholder="Enter First Nmae" id="first_name" name="first_name">
+
+        <label for="last_name">Last Name</label>
+        <input type="text" placeholder="Enter Last Name" id="last_name" name="last_name">
+        
+         <label for="mobile">mobile</label>
+        <input type="text" placeholder="mobile" name="mobile" id="mobile">
+        {% endcomment %}
+
+        <label for="password1">Password</label>
+        <input type="password" placeholder="Password" id="password1" name="password1">
+
+        <label for="password2">Confrom Password</label>
+        <input type="password" placeholder="Confrom Password" id="password2" name="password2">
+        <button type="submit">Signup</button>
+        
+        <a href="{% url 'loginp' %}" >i have already account</a>
+    </form>
+</body>
+</html>

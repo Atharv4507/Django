@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="static/images/skillup1.jpg">
+    <title>SkilledUp</title>
+    <link rel="stylesheet" type="text/css" href="static/login.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show my-0" role="alert">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <form method="post">
+        
+        <img src="static/images/skillup1.jpg" alt="icon" style="height:35px; width:35px; margin:2px 140px;">
+        <h1 style="display:cente; text-align:center;">SkilledUp</h1>
+        <h4 style="display:cente; text-align:center;">Login Here</h4>
+        {% csrf_token %} 
+        <label for="usename">Username</label>
+        <input type="text" placeholder="Enter username" id="username" name="username">
+        
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="pass">
+
+        <button type="submit">Log In</button>
+        <a href="{% url 'sign' %}" >Create a account</a>
+    </form>
+</body>
+</html>
